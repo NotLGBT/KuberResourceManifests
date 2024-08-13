@@ -1,0 +1,26 @@
+apiVersion: v1
+entries:
+  highreliable:
+    - apiVersion: v2
+      name: highreliable
+      version: 0.1.0
+      description: A Helm chart for Kubernetes
+      type: application
+      urls:
+        - https://github.com/NotLGBT/KuberResourceManifests.git/highreliable-0.1.0.tgz
+      created: "2024-08-13T21:02:26.772546347+03:00"
+      digest: "6ae04e5b998e2a7374d8b3b19f90c8df3b9d176f3a5d3edb9a646d9e1cfa6f2b"
+      maintainers:
+        - name: John Doe
+          email: john.doe@example.com
+      sources:
+        - https://github.com/NotLGBT/KuberResourceManifests.git
+      keywords:
+        - reliable
+        - high-availability
+      home: https://github.com/NotLGBT/KuberResourceManifests.git
+      dependencies: []
+      appVersion: "1.16.0"
+      deprecated: false
+
+generated: "2024-08-13T21:02:26.772546347+03:00"
