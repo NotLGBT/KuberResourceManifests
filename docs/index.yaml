@@ -3,12 +3,12 @@ entries:
   highreliable:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-08-13T22:11:59.333082893+03:00"
+    created: "2024-08-13T22:34:55.266314956+03:00"
     description: A Helm chart for Kubernetes
     digest: cb02db262586a392bf021ae8d7fbee6026bbf2a747488bf5834b037fe02a9259
     name: highreliable
     type: application
     urls:
-    - https://notlgbt.github.io/NotLGBT/KuberResourceManifests/highreliable-0.1.0.tgz
+    - https://notlgbt.github.io/KuberResourceManifests/highreliable-0.1.0.tgz
     version: 0.1.0
-generated: "2024-08-13T22:11:59.332223193+03:00"
+generated: "2024-08-13T22:34:55.265506856+03:00"
