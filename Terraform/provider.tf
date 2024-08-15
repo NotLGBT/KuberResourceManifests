@@ -18,7 +18,6 @@ terraform {
 provider "google" {
   project = "aqueous-sandbox-432016-j4"
   region  = "europe-central2"
-  access_token = "${GOOGLE_APPLICATION_CREDENTIALS}"
 }
 provider "helm" {
   kubernetes {

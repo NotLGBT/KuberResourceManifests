@@ -74,10 +74,17 @@ jobs:
       uses: hashicorp/setup-terraform@v1
       with:
         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
-
+    - name: Set Up Google Cloud credentials 
+      env: 
+        GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+      run: |
+        echo "$GOOGLE_CREDENTIALS" > /tmp/account.json
+        export GOOGLE_APPLICATION_CREDENTIALS="/tmp/account.json"
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
-      run: terraform init
+      run: terraform init \
+          -backend-config="bucket=$TF_VAR_BUCKET_NAME" \
+          -backend-config="prefix=terraform/state"
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format

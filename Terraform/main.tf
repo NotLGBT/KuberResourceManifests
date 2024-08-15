@@ -29,10 +29,10 @@ resource "local_file" "default" {
     }
   }
   EOT
-  provisioner "local-exec" {
-    command = "gsutil cp backend.tf gs://${google_storage_bucket.default.name}/backend.tf & / export TF_VAR_BUCKET_NAME=${google_storage_bucket.default.name}" 
-  }
-  depends_on = [google_storage_bucket.default]
+  # provisioner "local-exec" {
+  #   command = "gsutil cp backend.tf gs://${google_storage_bucket.default.name}/backend.tf & / export TF_VAR_BUCKET_NAME=${google_storage_bucket.default.name}" 
+  # }
+  # depends_on = [google_storage_bucket.default]
 }
 
 module "cluster" {
