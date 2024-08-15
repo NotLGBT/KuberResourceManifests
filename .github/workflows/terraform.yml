@@ -34,7 +34,7 @@ jobs:
         cat /tmp/account.json         
         export GOOGLE_APPLICATION_CREDENTIALS="/tmp/account.json"
         echo $GOOGLE_APPLICATION_CREDENTIALS
-        gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS
+        gcloud auth activate-service-account --key-file="${GOOGLE_APPLICATION_CREDENTIALS}"
       env:
         GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
         
