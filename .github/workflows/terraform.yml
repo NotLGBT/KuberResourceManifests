@@ -78,7 +78,7 @@ jobs:
       env: 
         GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
       run: |
-        echo "$GOOGLE_CREDENTIALS" > /tmp/account.json
+        echo "$GOOGLE_CREDENTIALS" > /tmp/account.json \
         export GOOGLE_APPLICATION_CREDENTIALS="/tmp/account.json"
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
